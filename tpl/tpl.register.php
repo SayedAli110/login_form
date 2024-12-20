@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CodePen - login-signup</title>
-  <link rel="stylesheet" href="../assets/style/auth.css">
+  <link rel="stylesheet" href="assets/style/auth.css">
 
 </head>
 <body>
@@ -32,5 +32,27 @@
 				</form>
 			</div>
 		</div>
-</body>
+		<div class="panel">
+			<div id="switch">Sign Up</div>
+			<div id="image-overlay"></div>
+			<div id="image-side"></div>
+		</div>
+	</div>
+</div>
+<!-- partial -->
+  <script src='http://project.php/login-form-excercise/assets/vendor/jquery-3.6.0.min.js'></script>
+  <script>
+	  $('#switch').click(function(){
+		$(this).text(function(i, text){
+			return text === "Sign Up" ? "Log In" : "Sign Up";
+		});
+		$('#login').toggleClass("on");
+		$('#signup').toggleClass("on");
+		$(this).toggleClass("two");
+		$('#background').toggleClass("two");
+		$('#image-overlay').toggleClass("two");
+})
+  </script>
+	</body>
+
 </html>
